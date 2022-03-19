@@ -9,9 +9,10 @@ window.addEventListener('load', () => {
     } else {
       console.warn('页面结构变更，定位meta失败', metaElem)
     }
-    var waline = document.createElement("div");
-    waline.id = 'waline';
-    articleElem[0].appendChild(waline);
+    var commentElem = document.createElement("div");
+    commentElem.id = 'comments';
+    commentElem.innerHTML='<div id="waline"></div>'
+    articleElem[0].appendChild(commentElem);
 
     Waline({
       el: "#waline",
