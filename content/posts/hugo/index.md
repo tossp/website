@@ -10,7 +10,7 @@ tags:
   - github
   - git
 categories: 
-  - 服务
+  - 应用服务
 
 resources:
   - name: "featured-image"
@@ -19,7 +19,9 @@ resources:
 lightgallery: true
 
 toc:
-  auto: false
+  enable: true
+math:
+  enable: false
 
 ---
 
