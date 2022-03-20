@@ -13,6 +13,9 @@ variables:
 pages:
   tags:
     - tsn
+  environment:
+    name: staging
+    url: https://i.tossp.com
   script:
     - git fetch
     - hugo --gc --minify --enableGitInfo
