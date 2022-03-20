@@ -14,7 +14,7 @@ pages:
   tags:
     - tsn
   environment:
-    name: staging
+    name: prod
     url: https://i.tossp.com
   script:
     - git fetch
