@@ -388,7 +388,7 @@ theme = "LoveIt"
         # 或者
         # someJavascript = "https://cdn.example.com/some.js"
         walineJavascript= "https://cdn.jsdelivr.net/npm/@waline/client"
-        runJavascript= "js/run.js"
+        runJavascript= "js/comments.js"
     #  页面 SEO 配置
     [params.page.seo]
       # 图片 URL
