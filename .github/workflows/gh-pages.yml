@@ -11,22 +11,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 检出代码
         uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
+      - name: 安装Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
+      - name: 构建
         run: hugo --gc --minify --enableGitInfo
 
-      - name: Deploy
+      - name: 发布
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
@@ -36,5 +36,5 @@ jobs:
           publish_branch: gh
           force_orphan: true
 
-      - name: Delete workflow runs
+      - name: 清理工作流
         uses: Mattraks/delete-workflow-runs@v2
