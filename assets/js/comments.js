@@ -24,8 +24,8 @@ window.addEventListener('load', () => {
       dark: 'body[theme="dark"]',
       path:pathID,
       emoji: [
-        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
-        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
       ],
     });
   };
