@@ -51,7 +51,7 @@ code:
 
 编辑`config.toml`在合适的位置放入客户端的脚本`https://cdn.jsdelivr.net/npm/@waline/client`,我当前使用的`LoveIt`，关键配置就一行
 
-```yml
+```toml
 ...
   [params.page]
     [params.page.library]
@@ -126,7 +126,7 @@ window.addEventListener('load', () => {
 
 最后在`config.toml`中引入这个js脚本
 
-```yml
+```toml
 ...
   [params.page]
     [params.page.library]
