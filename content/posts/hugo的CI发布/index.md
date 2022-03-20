@@ -9,7 +9,7 @@ tags:
   - gitlab
   - hugo
 categories: 
-  - 应用服务
+  - 配置技巧
 
 resources:
   - name: "featured-image"
