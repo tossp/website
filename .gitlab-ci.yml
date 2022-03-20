@@ -3,6 +3,12 @@ image: registry.gitlab.com/pages/hugo/hugo_extended:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+测试构建:
+  script:
+    - hugo
+  except:
+    - main
+
 pages:
   tags:
     - tsn
