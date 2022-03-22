@@ -52,7 +52,7 @@ seafile 这种文件存储最恼火的就是有大量的小文件，使用块复
 - `-P`参数是`--progress`和`--partial`这两个参数的结合，`--progress`参数表示显示进展，`--partial`参数允许恢复中断的传输。
 
 ```shell
-rsync -avzhP root@192.168.0.240:/work /work/
+rsync -avzhP root@192.168.0.240:/work /backup/
 ```
 
 以为这样就结束了？让设备跑了一个通宵~还是没跑完，进去看了一些速度大概10M/s，嗯，，，特别棒，感觉这个月的KPI都在这上面了。
@@ -68,7 +68,7 @@ seafile 的数据主要在`seafile-data`在文件夹里面，分布式存储嘛�
 ```shell
 # 可以合并为一条命令
 ssh root@192.168.0.240 '/bin/ls /work/seafile-server/seafile-data/storage/blocks/' > ts.list
-cat ts.list | xargs -n1 -P8 -I% rsync -avzhP root@192.168.0.240:/work/seafile-server/seafile-data/storage/blocks/% /work/work/seafile-server/seafile-data/storage/blocks/
+cat ts.list | xargs -n1 -P8 -I% rsync -avzhP root@192.168.0.240:/work/seafile-server/seafile-data/storage/blocks/% /backup/work/seafile-server/seafile-data/storage/blocks/
 ```
 
 看了一下成果，服务器 CPU 大概 60% 左右，工作机 CPU 负载 20% 左右，磁盘 IO 70% 左右。
